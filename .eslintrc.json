@@ -1,0 +1,37 @@
+{
+    "$schema": "https://json.schemastore.org/eslintrc",
+    "root": true,
+    "extends": [
+      "next/core-web-vitals",
+      "next/typescript",
+      "prettier",
+      "plugin:tailwindcss/recommended"
+    ],
+    "plugins": ["tailwindcss"],
+    "rules": {
+      "tailwindcss/no-custom-classname": "off",
+      "tailwindcss/classnames-order": "off",
+      "max-len": [
+      "error",
+        {
+          "code": 120,
+          "ignoreComments": true,
+          "ignoreTrailingComments": true,
+          "ignoreStrings": true,
+          "ignoreTemplateLiterals": true
+        }
+      ]
+    },
+    "settings": {
+      "tailwindcss": {
+        "callees": ["cn", "cva"],
+        "config": "tailwind.config.js"
+      }
+    },
+    "overrides": [
+      {
+        "files": ["*.ts", "*.tsx"],
+        "parser": "@typescript-eslint/parser"
+      }
+    ]
+}
