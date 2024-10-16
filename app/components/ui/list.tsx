@@ -11,9 +11,11 @@ const ListBlock = ({ items }: Extract<Block, { type: 'list' }>) => (
           hover:shadow-lg transition-shadow duration-300
         "
       >
-        <div className="shrink-0 size-20 md:size-[80px] rounded-lg overflow-hidden">
-          <Image src={src ?? ''} alt="" width={80} height={80} className="size-full object-cover rounded-lg" />
-        </div>
+        {src && (
+          <div className="shrink-0 size-20 md:size-[80px] rounded-lg overflow-hidden">
+            <Image src={src} alt="" width={80} height={80} className="size-full object-cover rounded-lg" />
+          </div>
+        )}
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-gray-800 text-left">{title}</h3>
           <p className="text-gray-600 text-left">{description}</p>

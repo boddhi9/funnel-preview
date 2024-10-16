@@ -72,6 +72,34 @@ Run this to format your code according to the Prettier configuration.
 Checks the code formatting using Prettier in the specified folders without making changes.\
 This command helps ensure that the code is consistently formatted across the project.
 
+### `npm run storybook`
+
+Starts the Storybook development server on [http://localhost:6006](http://localhost:6006). This is used to visualize and interact with the UI components.
+
+### `npm run build-storybook`
+
+Builds a static version of Storybook that can be deployed for others to review the UI components.
+
+### `npm run analyze:server`
+
+Runs the Next.js build with server bundle analyzer enabled, helping identify potential issues in the server-side code.
+
+### `npm run analyze:browser`
+
+Runs the Next.js build with the browser bundle analyzer enabled, giving insights into the client-side bundle size.
+
+## Storybook
+
+This project uses [Storybook](https://storybook.js.org/) for visualizing and testing UI components in isolation. I have set up stories for components located in the `app/components/ui` folder.
+
+To view the stories, run:
+
+```bash
+npm run storybook
+```
+
+Storybook will launch at [http://localhost:6006](http://localhost:6006), allowing you to browse through and test the UI components interactively.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
